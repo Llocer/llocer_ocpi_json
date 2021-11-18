@@ -1,0 +1,56 @@
+{
+  "title": "V2.2.1\\Version Details",
+  "type": "object",
+  "definitions": {
+        "endpoint": {
+            "type": "object",
+            "properties": {
+		        "identifier": {
+        			"type": "string",
+          			"enum": [
+            			"cdrs",
+            			"commands",
+            			"credentials",
+            			"locations",
+            			"sessions",
+            			"tariffs",
+            			"tokens"
+          			]
+        		},
+        		"role": {
+          			"type": "string",
+          			"enum": [
+            			"SENDER",
+            			"RECEIVER"
+          			]
+        		},
+        		"url": {
+          			"type": "string",
+          			"format": "uri"
+        		}
+        	},
+        	"require": [
+          		"identifier",
+          		"role",
+          		"url"
+        	],
+	        "additionalProperties": false
+      	}
+  },
+  
+  "properties": {
+    "version" : {
+      "$ref": "common.schema.json#/definitions/version"
+    },
+    "endpoints": {
+      "type": [
+        "array"
+      ],
+      "minItems": 1,
+      "items": {
+	      "$ref": "#/definitions/endpoint"
+      }
+    }
+  },
+  "additionalProperties": false
+}

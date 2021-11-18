@@ -14,7 +14,7 @@
                     "format": "uri"
                 },
                 "business_details": {
-                    "$ref": "common.schema.json#/definitions/business_details"
+                    "$ref": "#/definitions/business_details"
                 },
                 "party_id": {
                     "type": "string",
@@ -438,10 +438,9 @@
         "version": {
             "type": "string",
             "enum": [
-                "2.0",
-                "2.1",
-                "2.1.1"
+                "2.2.1"
             ]
         }
+        
     }
 }
