@@ -2,6 +2,16 @@
     "title": "V2.1.1\\Token",
     "type": "object",
     "properties": {
+        "country_code": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2
+        },
+        "party_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 3
+        },
         "uid": {
             "type": "string",
             "minLength": 1,
@@ -10,11 +20,13 @@
         "type": {
             "type": "string",
             "enum": [
+            	"AD_HOC_USER",
+            	"APP_USER",
                 "RFID",
                 "OTHER"
             ]
         },
-        "auth_id": {
+        "contract_id": {
             "type": "string",
             "minLength": 1,
             "maxLength": 36
@@ -28,6 +40,11 @@
             "type": "string",
             "minLength": 1,
             "maxLength": 64
+        },
+        "group_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 36
         },
         "valid": {
             "type": "boolean"
@@ -45,6 +62,30 @@
             "type": "string",
             "minLength": 1,
             "maxLength": 2
+        },
+        "default_profile_type": {
+            "type": "string",
+            "enum": [
+                "CHEAP",
+                "FAST",
+                "GREEN",
+                "REGULAR"
+            ]
+        },
+        "energy_contract": {
+            "type": "object",
+            "properties": {
+		        "supplier_name": {
+        		    "type": "string",
+            		"minLength": 1,
+            		"maxLength": 64
+        		},
+		        "contract_id": {
+        		    "type": "string",
+            		"minLength": 1,
+            		"maxLength": 64
+        		}
+            }
         },
         "last_updated": {
             "$ref": "common.schema.json#/definitions/timestamp"
