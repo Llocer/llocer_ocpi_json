@@ -15,6 +15,9 @@
                     <includeGetters>false</includeGetters>
                     <includeSetters>false</includeSetters>
                     <initializeCollections>false</initializeCollections>
+                    <includeAdditionalProperties>false</includeAdditionalProperties>
+                    <initializeCollections>false</initializeCollections>
+                    <removeOldOutput>true</removeOldOutput>
                 </configuration>
                 <executions>
                     <execution>

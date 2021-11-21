@@ -418,17 +418,6 @@
                         "minLength": 1,
                         "maxLength": 39
                     }
-                },
-                "connector_ids": {
-                    "type": [
-                        "array",
-                        "null"
-                    ],
-                    "items": {
-                        "type": "string",
-                        "minLength": 1,
-                        "maxLength": 39
-                    }
                 }
             },
             "required": [
