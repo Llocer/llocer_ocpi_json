@@ -12,6 +12,7 @@
                 <configuration>
                     <sourceDirectory>${basedir}/src/main/resources/schema</sourceDirectory>
                     <targetPackage>com.llocer.ev.msgs.ocpi</targetPackage>
+                    <classNamePrefix>Ocpi</classNamePrefix>
                     <includeGetters>false</includeGetters>
                     <includeSetters>false</includeSetters>
                     <initializeCollections>false</initializeCollections>

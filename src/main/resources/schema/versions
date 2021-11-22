@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "version": {
+      "$ref": "version#"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "require": [
+    "version",
+    "url"
+  ],
+  "additionalProperties": false
+}

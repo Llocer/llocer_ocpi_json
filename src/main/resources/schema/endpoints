@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "version": {
+      "$ref": "version#"
+    },
+    "endpoints": {
+      "type": [
+        "array"
+      ],
+      "minItems": 1,
+      "items": {
+        "$ref": "endpoint#"
+      }
+    }
+  },
+  "additionalProperties": false
+}

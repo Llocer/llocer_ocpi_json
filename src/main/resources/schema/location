@@ -1,0 +1,166 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 39
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "ON_STREET",
+        "PARKING_GARAGE",
+        "UNDERGROUND_GARAGE",
+        "PARKING_LOT",
+        "OTHER",
+        "UNKNOWN"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "address": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 45
+    },
+    "city": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 45
+    },
+    "postal_code": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 10
+    },
+    "country": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 3
+    },
+    "coordinates": {
+      "$ref": "geo_location#"
+    },
+    "related_locations": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "related_locations#"
+        }
+      ]
+    },
+    "evses": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "evse#"
+      }
+    },
+    "directions": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "display_text#"
+      }
+    },
+    "operator": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "business_details#"
+        }
+      ]
+    },
+    "suboperator": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "business_details#"
+        }
+      ]
+    },
+    "owner": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "business_details#"
+        }
+      ]
+    },
+    "facilities": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+          "$ref": "facility#"
+      }
+    },
+    "time_zone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "opening_times": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "hours#"
+        }
+      ]
+    },
+    "charging_when_closed": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "images": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "image#"
+      }
+    },
+    "energy_mix": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "energy_mix#"
+        }
+      ]
+    },
+    "last_updated": {
+      "$ref": "timestamp#"
+    }
+  },
+  "additionalProperties": false
+}

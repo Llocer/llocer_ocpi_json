@@ -1,0 +1,14 @@
+{
+  "type": "string",
+  "enum": [
+    "AVAILABLE",
+    "BLOCKED",
+    "CHARGING",
+    "INOPERATIVE",
+    "OUTOFORDER",
+    "PLANNED",
+    "REMOVED",
+    "RESERVED",
+    "UNKNOWN"
+  ]
+}

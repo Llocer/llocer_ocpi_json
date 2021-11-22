@@ -1,0 +1,6 @@
+{
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 10,
+  "pattern": "^-?[0-9]{1,2}\\.[0-9]{6}$"
+}

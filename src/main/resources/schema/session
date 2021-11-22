@@ -1,0 +1,92 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    },
+    "start_datetime": {
+      "$ref": "timestamp#"
+    },
+    "end_datetime": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "timestamp#"
+        }
+      ]
+    },
+    "kwh": {
+      "type": "number"
+    },
+    "auth_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    },
+    "auth_method": {
+      "type": "string",
+      "enum": [
+        "AUTH_REQUEST",
+        "WHITELIST"
+      ]
+    },
+    "location": {
+      "$ref": "location#",
+      "required": [
+        "id",
+        "type",
+        "address",
+        "city",
+        "postal_code",
+        "country",
+        "coordinates",
+        "last_updated"
+      ]
+    },
+    "meter_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "currency": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 3
+    },
+    "charging_periods": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "charging_period#"
+      }
+    },
+    "total_cost": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "COMPLETED",
+        "INVALID",
+        "PENDING"
+      ]
+    },
+    "last_updated": {
+      "$ref": "timestamp#"
+    }
+  },
+  "additionalProperties": false
+}

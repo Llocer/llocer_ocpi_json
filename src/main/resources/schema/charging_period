@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "properties": {
+    "start_date_time": {
+      "type": "string"
+    },
+    "dimensions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "ENERGY",
+              "FLAT",
+              "MAX_CURRENT",
+              "MIN_CURRENT",
+              "PARKING_TIME",
+              "TIME"
+            ]
+          },
+          "volume": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "type",
+          "volume"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "start_date_time",
+    "dimensions"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,119 @@
+{
+  "type": "object",
+  "properties": {
+    "uid": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 39
+    },
+    "evse_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 48
+    },
+    "status": {
+      "$ref": "evse_status#"
+    },
+    "status_schedule": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "period_begin": {
+            "$ref": "timestamp#"
+          },
+          "period_end": {
+            "$ref": "timestamp#"
+          },
+          "status": {
+            "$ref": "evse_status#"
+          }
+        },
+        "required": [
+          "period_begin",
+          "status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "capabilities": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "capability#"
+      }
+    },
+    "connectors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "connector#"
+      }
+    },
+    "floor_level": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 4
+    },
+    "coordinates": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "geo_location#"
+        }
+      ]
+    },
+    "physical_reference": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 16
+    },
+    "directions": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "display_text#"
+      }
+    },
+    "parking_restrictions": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+      	"$ref": "parking_restriction#"
+      }
+    },
+    "images": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "image#"
+      }
+    },
+    "last_updated": {
+      "$ref": "timestamp#"
+    }
+  },
+  "additionalProperties": false
+}

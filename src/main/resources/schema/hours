@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "regular_hours": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "regular_hours#"
+      }
+    },
+    "twentyfourseven": {
+      "type": "boolean"
+    },
+    "exceptional_openings": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "exceptional_period#"
+      }
+    },
+    "exceptional_closings": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "exceptional_period#"
+      }
+    }
+  },
+  "additionalProperties": false
+}

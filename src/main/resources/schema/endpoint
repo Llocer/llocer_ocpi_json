@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "properties": {
+    "identifier": {
+      "type": "string",
+      "enum": [
+        "cdrs",
+        "commands",
+        "credentials",
+        "locations",
+        "sessions",
+        "tariffs",
+        "tokens"
+      ]
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "SENDER",
+        "RECEIVER"
+      ]
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "require": [
+    "identifier",
+    "role",
+    "url"
+  ],
+  "additionalProperties": false
+}

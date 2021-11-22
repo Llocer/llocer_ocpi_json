@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "website": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "logo": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "image#"
+        }
+      ]
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,10 @@
+      {
+        "type": "string",
+        "enum": [
+          "EV_ONLY",
+          "PLUGGED",
+          "DISABLED",
+          "CUSTOMERS",
+          "MOTORCYCLES"
+        ]
+      }

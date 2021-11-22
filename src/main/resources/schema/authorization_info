@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "properties": {
+    "allowed": {
+      "type": "string",
+      "enum": [
+        "ALLOWED",
+        "BLOCKED",
+        "EXPIRED",
+        "NO_CREDIT",
+        "NOT_ALLOWED"
+      ]
+    },
+    "token": {
+      "$ref": "token#"
+    },
+    "location": {
+      "$ref": "location_references#"
+    },
+    "authorization_reference": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    },
+    "info": {
+      "$ref": "display_text#"
+    }
+  },
+  "additionalProperties": false
+}

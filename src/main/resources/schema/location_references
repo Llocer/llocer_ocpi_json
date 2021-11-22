@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {
+    "location_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 39
+    },
+    "evse_uids": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 39
+      }
+    }
+  },
+  "required": [
+    "location_id"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "period_begin": {
+      "$ref": "timestamp#"
+    },
+    "period_end": {
+      "$ref": "timestamp#"
+    }
+  },
+  "required": [
+    "period_begin",
+    "period_end"
+  ],
+  "additionalProperties": false
+}

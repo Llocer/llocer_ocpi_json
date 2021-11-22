@@ -1,0 +1,11 @@
+      {
+        "type": "string",
+        "enum": [
+          "CHARGING_PROFILE_CAPABLE",
+          "CREDIT_CARD_PAYABLE",
+          "REMOTE_START_STOP_CAPABLE",
+          "RESERVABLE",
+          "RFID_READER",
+          "UNLOCK_CAPABLE"
+        ]
+      }
