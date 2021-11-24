@@ -10,8 +10,10 @@
         "locations",
         "sessions",
         "tariffs",
-        "tokens"
-      ]
+        "tokens",
+        "tokens",
+		"chargingprofiles"      
+		]
     },
     "role": {
       "type": "string",

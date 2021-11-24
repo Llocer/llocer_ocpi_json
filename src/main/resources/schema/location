@@ -1,21 +1,25 @@
 {
   "type": "object",
   "properties": {
+      "country_code": {
+    	"$ref": "country_code"
+    },
+    "party_id": {
+    	"$ref": "party_id"
+    },
     "id": {
       "type": "string",
       "minLength": 1,
       "maxLength": 39
     },
-    "type": {
-      "type": "string",
-      "enum": [
-        "ON_STREET",
-        "PARKING_GARAGE",
-        "UNDERGROUND_GARAGE",
-        "PARKING_LOT",
-        "OTHER",
-        "UNKNOWN"
-      ]
+    "publish": {
+      "type": "boolean"
+    },
+    "publish_allowed_to": {
+      "type": "array",
+      "items": {
+        "$ref": "publish_token"
+      }
     },
     "name": {
       "type": [
@@ -40,13 +44,18 @@
       "minLength": 1,
       "maxLength": 10
     },
+    "state": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20
+    },
     "country": {
       "type": "string",
       "minLength": 3,
       "maxLength": 3
     },
     "coordinates": {
-      "$ref": "geo_location#"
+      "$ref": "geo_location"
     },
     "related_locations": {
       "oneOf": [

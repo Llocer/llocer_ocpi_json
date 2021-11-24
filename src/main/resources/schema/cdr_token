@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "country_code": {
+    	"$ref": "country_code"
+    },
+    "party_id": {
+    	"$ref": "party_id"
+    },
+    "uid": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    },
+    "type": {
+      "$ref": "token_type"
+    },
+    "contract_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    }
+  },
+  "additionalProperties": false
+}

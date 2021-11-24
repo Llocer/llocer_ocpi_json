@@ -1,6 +1,12 @@
 {
   "type": "object",
   "properties": {
+      "country_code": {
+    	"$ref": "country_code"
+    },
+    "party_id": {
+    	"$ref": "party_id"
+    },
     "id": {
       "type": "string",
       "minLength": 1,
@@ -22,10 +28,8 @@
     "kwh": {
       "type": "number"
     },
-    "auth_id": {
-      "type": "string",
-      "minLength": 1,
-      "maxLength": 36
+    "cdr_token": {
+		"$ref": "cdr_token"
     },
     "auth_method": {
       "type": "string",
@@ -34,18 +38,25 @@
         "WHITELIST"
       ]
     },
-    "location": {
-      "$ref": "location#",
-      "required": [
-        "id",
-        "type",
-        "address",
-        "city",
-        "postal_code",
-        "country",
-        "coordinates",
-        "last_updated"
-      ]
+    "auth_reference": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    },
+    "location_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    },
+    "evse_uid": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    },
+    "connector_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
     },
     "meter_id": {
       "type": [

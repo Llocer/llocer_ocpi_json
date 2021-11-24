@@ -2,14 +2,10 @@
   "type": "object",
   "properties": {
     "country_code": {
-      "type": "string",
-      "minLength": 1,
-      "maxLength": 2
+    	"$ref": "country_code"
     },
     "party_id": {
-      "type": "string",
-      "minLength": 1,
-      "maxLength": 3
+    	"$ref": "party_id"
     },
     "uid": {
       "type": "string",
@@ -17,13 +13,7 @@
       "maxLength": 36
     },
     "type": {
-      "type": "string",
-      "enum": [
-        "AD_HOC_USER",
-        "APP_USER",
-        "RFID",
-        "OTHER"
-      ]
+      "$ref": "token_type"
     },
     "contract_id": {
       "type": "string",

@@ -1,0 +1,28 @@
+{
+  "type": "object",
+    "uid": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    },
+    "type": {
+      "$ref": "token_type"
+    },
+    "visual_number": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "issuer": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "group_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    }
+  },
+  "additionalProperties": false
+}
