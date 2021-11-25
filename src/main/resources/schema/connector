@@ -57,13 +57,17 @@
     "amperage": {
       "type": "integer"
     },
-    "tariff_id": {
+    "tariff_ids": {
       "type": [
-        "string",
+        "array",
         "null"
       ],
-      "minLength": 1,
-      "maxLength": 36
+      "items": {
+      	"type": [
+    	    "string",
+        	"null"
+      	] 
+      }
     },
     "terms_and_conditions": {
       "type": [
