@@ -1,0 +1,12 @@
+{
+          "type": "object",
+          "properties": {
+                "excl_vat": {
+              		"type": "number"
+	            },
+                "incl_vat": {
+              		"type": "number"
+            	}
+            }
+}
+ 

@@ -1,6 +1,12 @@
 {
   "type": "object",
   "properties": {
+    "country_code": {
+    	"$ref": "country_code"
+    },
+    "party_id": {
+    	"$ref": "party_id"
+    },
     "id": {
       "type": "string",
       "minLength": 1,
@@ -10,6 +16,16 @@
       "type": "string",
       "minLength": 3,
       "maxLength": 3
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+		"AD_HOC_PAYMENT",
+		"PROFILE_CHEAP",
+		"PROFILE_FAST",
+		"PROFILE_GREEN",
+		"REGULAR"
+      ]
     },
     "tariff_alt_text": {
       "type": [
@@ -27,12 +43,24 @@
       ],
       "format": "uri"
     },
+    "min_price": {
+    	"$ref": "price"
+    },
+    "max_price": {
+    	"$ref": "price"
+    },
     "elements": {
       "type": "array",
       "minItems": 1,
       "items": {
         "$ref": "tariff_element#"
       }
+    },
+    "start_date_time": {
+      "$ref": "timestamp#"
+    },
+    "end_date_time": {
+      "$ref": "timestamp#"
     },
     "energy_mix": {
       "oneOf": [
