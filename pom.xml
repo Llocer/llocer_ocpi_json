@@ -18,7 +18,9 @@
                     <initializeCollections>false</initializeCollections>
                     <includeAdditionalProperties>false</includeAdditionalProperties>
                     <initializeCollections>false</initializeCollections>
-                    <removeOldOutput>true</removeOldOutput>
+                    <dateTimeType>java.time.Instant</dateTimeType>
+                    <customDateTimePattern>yyyy-MM-dd'T'HH:mm:ss[.SSS]'Z'</customDateTimePattern> 
+                    
                 </configuration>
                 <executions>
                     <execution>
