@@ -2,7 +2,7 @@
   "type": "object",
   "properties": {
     "start_date_time": {
-      "type": "string"
+      "$ref": "timestamp#"
     },
     "dimensions": {
       "type": "array",
@@ -11,15 +11,7 @@
         "type": "object",
         "properties": {
           "type": {
-            "type": "string",
-            "enum": [
-              "ENERGY",
-              "FLAT",
-              "MAX_CURRENT",
-              "MIN_CURRENT",
-              "PARKING_TIME",
-              "TIME"
-            ]
+          	"$ref": "cdr_dimension_type"
           },
           "volume": {
             "type": "number"
@@ -31,6 +23,9 @@
         ],
         "additionalProperties": false
       }
+    },
+    "tariff_id": {
+      "type": "string"
     }
   },
   "required": [
