@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "start_period": {
+    	"type": "integer"
+    },
+    "limit": {
+    	"type": "number"
+    }
+  },
+  "required": [
+    "start_period",
+    "limit"
+  ]
+}

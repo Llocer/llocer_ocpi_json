@@ -1,0 +1,10 @@
+{
+      "type": "string",
+      "enum": [
+		"ACCEPTED",
+		"NOT_SUPPORTED",
+		"REJECTED",
+		"TOO_OFTEN",
+		"UNKNOWN_SESSION" 
+	]
+}

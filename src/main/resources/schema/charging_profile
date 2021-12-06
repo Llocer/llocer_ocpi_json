@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "properties": {
+    "start_date_time": {
+      "$ref": "timestamp#"
+    },
+    "duration": {
+      "type": "integer"
+    },
+    "charging_rate_unit": {
+      "$ref": "charging_rate_unit#"
+    },
+    "min_charging_rate": {
+      "type": "number"
+    },
+    "charging_profile_period": {
+      "type": "array",
+      "items": {
+        "$ref": "charging_profile_period#"
+      }
+    }
+  },
+  "required": [
+    "charging_rate_unit"
+  ]
+}

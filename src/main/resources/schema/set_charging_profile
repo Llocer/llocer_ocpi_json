@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "charging_profile": {
+      "$ref": "charging_profile#"
+    },
+    "response_url": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "required": [
+    "charging_profile",
+    "response_url"
+  ]
+}

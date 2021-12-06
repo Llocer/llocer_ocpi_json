@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "result": {
+      "$ref": "charging_profile_response_type#"
+    },
+    "timeout": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "result",
+    "timeout"
+  ]
+}
