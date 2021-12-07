@@ -1,7 +1,7 @@
 {
   "type": "object",
   "properties": {
-      "country_code": {
+    "country_code": {
     	"$ref": "country_code"
     },
     "party_id": {

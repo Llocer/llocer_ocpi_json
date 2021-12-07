@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "properties": {
+    "country_code": {
+    	"$ref": "country_code"
+    },
+    "party_id": {
+    	"$ref": "party_id"
+    },
+    "role": {
+        "$ref": "role#"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+      	"CONNECTED",
+		"OFFLINE",
+		"PLANNED",
+		"SUSPENDED"
+      ]
+    },
+    "last_update": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "result",
+    "timeout"
+  ]
+}
