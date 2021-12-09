@@ -15,11 +15,7 @@
 		]
     },
     "role": {
-      "type": "string",
-      "enum": [
-        "SENDER",
-        "RECEIVER"
-      ]
+    	"$ref": "interface_role"
     },
     "url": {
       "type": "string",
