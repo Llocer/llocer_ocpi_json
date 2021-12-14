@@ -20,6 +20,7 @@
                     <initializeCollections>false</initializeCollections>
                     <dateTimeType>java.time.Instant</dateTimeType>
                     <customDateTimePattern>yyyy-MM-dd'T'HH:mm:ss[.SSS]'Z'</customDateTimePattern> 
+                    <includeAdditionalProperties>false</includeAdditionalProperties>
                     
                 </configuration>
                 <executions>
