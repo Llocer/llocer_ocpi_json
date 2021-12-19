@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "profile_type": {
+    	"$ref": "profile_type"
+    },
+    "departure_time": {
+      "$ref": "timestamp#"
+    },
+    "energy_need": {
+      "type": "number"
+    },
+    "discharge_allowed": {
+      "type": "boolean"
+    }
+   },
+   "required": [
+   	"profile_type"
+  ]
+}
