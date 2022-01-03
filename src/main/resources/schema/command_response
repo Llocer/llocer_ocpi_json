@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "result": {
+      "type": "string",
+      "enum": [
+      	"NOT_SUPPORTED",
+		"REJECTED",
+		"ACCEPTED",
+		"UNKNOWN_SESSION"
+      ]
+    },
+    "timeout": {
+		"type": "integer"
+    },
+    "message": {
+      "$ref": "display_text"
+    }
+  },
+  "additionalProperties": false
+}

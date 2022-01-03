@@ -1,6 +1,15 @@
 {
   "type": "object",
+  "javaInterfaces" : [
+    "com.llocer.ev.ocpi.msgs.HasLastUpdated"
+  ],
   "properties": {
+      "country_code": {
+    	"$ref": "country_code"
+    },
+    "party_id": {
+    	"$ref": "party_id"
+    },
     "id": {
       "type": "string",
       "minLength": 1,
@@ -9,22 +18,27 @@
     "start_date_time": {
       "$ref": "timestamp#"
     },
-    "stop_date_time": {
+    "end_date_time": {
       "$ref": "timestamp#"
     },
-    "auth_id": {
+    "session_id": {
       "type": "string",
       "minLength": 1,
       "maxLength": 36
     },
+    "cdr_token": {
+		"$ref": "cdr_token"
+    },
     "auth_method": {
       "type": "string",
-      "enum": [
-        "AUTH_REQUEST",
-        "WHITELIST"
-      ]
+	  "$ref": "auth_method"
     },
-    "location": {
+    "authorization_reference": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    },
+    "cdr_location": {
       "$ref": "location#",
       "required": [
         "id",
@@ -66,13 +80,25 @@
         "$ref": "charging_period#"
       }
     },
+    "signed_data": {
+        "$ref": "signed_data"
+    },
     "total_cost": {
+      "type": "number"
+    },
+    "total_fixed_cost": {
       "type": "number"
     },
     "total_energy": {
       "type": "number"
     },
+    "total_energy_cost": {
+      "type": "number"
+    },
     "total_time": {
+      "type": "number"
+    },
+    "total_time_cost": {
       "type": "number"
     },
     "total_parking_time": {
@@ -81,6 +107,12 @@
         "null"
       ]
     },
+    "total_parking_cost": {
+      "type": "number"
+    },
+    "total_reservation_cost": {
+      "type": "number"
+    },
     "remark": {
       "type": [
         "string",
@@ -88,6 +120,18 @@
       ],
       "minLength": 1,
       "maxLength": 255
+    },
+    "invoke_reference_id": {
+      "type": "string"
+    },
+    "credit": {
+      "type": "boolean"
+    },
+    "credit_reference_id": {
+      "type": "string"
+    },
+    "home_charging_compensation": {
+      "type": "boolean"
     },
     "last_updated": {
       "$ref": "timestamp#"

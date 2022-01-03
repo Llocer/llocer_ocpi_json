@@ -1,5 +1,8 @@
 {
   "type": "object",
+    "javaInterfaces" : [
+    "com.llocer.ev.ocpi.msgs.HasLastUpdated"
+  ],
   "properties": {
     "country_code": {
     	"$ref": "country_code"

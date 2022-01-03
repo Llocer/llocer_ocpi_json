@@ -56,6 +56,20 @@
                             ],
                             "minimum": 0
                         },
+                        "min_current": {
+                            "type": [
+                                "number",
+                                "null"
+                            ],
+                            "minimum": 0
+                        },
+                        "max_current": {
+                            "type": [
+                                "number",
+                                "null"
+                            ],
+                            "minimum": 0
+                        },
                         "min_power": {
                             "type": [
                                 "number",
@@ -92,6 +106,13 @@
                             "items": {
                         	"$ref": "day_of_week#"
                             }
+                        },
+                        "reservation": {
+                            "type": "string",
+                            "enum": [
+                                "RESERVATION",
+                                "RESERVATION_EXPIRES"
+                            ]
                         }
                     },
                     "additionalProperties": false
@@ -100,35 +121,5 @@
             "required": [
                 "price_components"
             ],
-            "additionalProperties": false,
-            "definitions": {
-                "price_component": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "ENERGY",
-                                "FLAT",
-                                "PARKING_TIME",
-                                "TIME"
-                            ]
-                        },
-                        "price": {
-                            "type": "number",
-                            "minimum": 0
-                        },
-                        "step_size": {
-                            "type": "integer",
-                            "minimum": 0
-                        }
-                    },
-                    "required": [
-                        "type",
-                        "price",
-                        "step_size"
-                    ],
-                    "additionalProperties": false
-                }
-            }
+            "additionalProperties": false
         }

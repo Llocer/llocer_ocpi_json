@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "result": {
+      "type": "string",
+      "enum": [
+		"ACCEPTED",
+		"CANCELED_RESERVATION",
+		"EVSE_OCCUPIED EVSE",
+		"EVSE_INOPERATIVE EVSE",
+		"FAILED",
+		"NOT_SUPPORTED",
+		"REJECTED",
+		"TIMEOUT",
+		"UNKNOWN_RESERVATION"      ]
+    },
+    "message": {
+      "$ref": "display_text"
+    }
+  },
+  "additionalProperties": false
+}

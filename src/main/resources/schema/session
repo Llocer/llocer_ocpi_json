@@ -1,6 +1,6 @@
 {
   "type": "object",
-    "javaInterfaces" : [
+   "javaInterfaces" : [
     "com.llocer.ev.ocpi.msgs.HasLastUpdated"
   ],
   "properties": {
@@ -36,11 +36,7 @@
     },
     "auth_method": {
       "type": "string",
-      "enum": [
-        "AUTH_REQUEST",
-        "WHITELIST",
-        "COMMAND"
-      ]
+	  "$ref": "auth_method"
     },
     "auth_reference": {
       "type": "string",
