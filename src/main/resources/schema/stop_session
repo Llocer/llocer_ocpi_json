@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "response_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "session_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    }
+  },
+  "additionalProperties": false
+}

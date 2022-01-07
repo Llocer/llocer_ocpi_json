@@ -92,7 +92,8 @@
         "ACTIVE",
         "COMPLETED",
         "INVALID",
-        "PENDING"
+        "PENDING",
+        "RESERVATION"
       ]
     },
     "last_updated": {
