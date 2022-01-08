@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "properties": {
+    "result": {
+      "type": "string",
+      "enum": [
+		"ACCEPTED",
+		"REJECTED",
+		"UNKNOWN" 
+		]
+    },
+    "active_charging_profile": {
+      "type": "object",
+      "properties": {
+    	"start_date_time": {
+      		"$ref": "timestamp#"
+    	},
+    	"charging_profile": {
+      		"$ref": "charging_profile#"
+    	}
+      }
+    } 
+  },
+  "required": [
+    "result"
+  ]
+}
