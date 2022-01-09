@@ -11,7 +11,7 @@
                 <version>1.1.1</version>
                 <configuration>
                     <sourceDirectory>${basedir}/src/main/resources/schema</sourceDirectory>
-                    <targetPackage>com.llocer.ev.ocpi.msgs</targetPackage>
+                    <targetPackage>com.llocer.ev.ocpi.msgs22</targetPackage>
                     <classNamePrefix>Ocpi</classNamePrefix>
                     <includeGetters>true</includeGetters>
                     <includeSetters>true</includeSetters>
