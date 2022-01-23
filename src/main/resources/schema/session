@@ -16,17 +16,10 @@
       "maxLength": 36
     },
     "start_datetime": {
-      "$ref": "timestamp#"
+		"$ref": "timestamp#"
     },
     "end_datetime": {
-      "oneOf": [
-        {
-          "type": "null"
-        },
-        {
-          "$ref": "timestamp#"
-        }
-      ]
+		"$ref": "timestamp#"
     },
     "kwh": {
       "type": "number"
