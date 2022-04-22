@@ -1,6 +1,6 @@
-# openEV: json schemes for OCPI 2.2.1 messages
+# json schemes for OCPI 2.2.1 messages
 
-json schemes for OCPI 2.2.1 messages. 
+openEV json schemes for OCPI 2.2.1 messages. 
 
 This librarian is based on previous work done by [rvwoens/ocpi-schema](https://github.com/rvwoens/ocpi-schema).
 
