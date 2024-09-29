@@ -19,8 +19,8 @@
 		"SUSPENDED"
       ]
     },
-    "last_update": {
-      "type": "number"
+    "last_updated": {
+      "$ref": "timestamp#"
     }
   },
   "required": [
