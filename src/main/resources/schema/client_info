@@ -24,7 +24,9 @@
     }
   },
   "required": [
-    "result",
-    "timeout"
+    "party_id",
+    "country_code",
+    "role",
+    "status"
   ]
 }
